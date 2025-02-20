@@ -14,7 +14,7 @@ describe('Portfolio Tests', () => {
     login();
 
     cy.xpath("//a[normalize-space()='Portfolios']").click();
-    cy.wait(8000);
+    cy.wait(2000);
     cy.xpath("//a[@id='Advisory-tab']").click();
     cy.xpath("//a[@id='AIF-tab']").click();
     cy.xpath("//a[@id='Value Adder-tab']").click();

@@ -30,7 +30,7 @@ describe('Robonam Tests', () => {
     const fileName = 'SampleFile.xlsx';
     cy.get('input[type="file"]').invoke('show').attachFile(fileName);
     cy.xpath("//span[normalize-space()='Upload']").click();
-    cy.xpath("//h2[normalize-space()='Congratulations!']", { timeout: 1000 })
+    cy.xpath("//h2[normalize-space()='Congratulations!']", { timeout: 10000 })
     .should('exist')
     .should('be.visible');
     cy.xpath("//div[@class='robonam_close']").click();

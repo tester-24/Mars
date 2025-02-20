@@ -13,11 +13,11 @@ describe('Dashboard Tests', () => {
     // Call the login function from login.cy.js
     login();
 
-    cy.wait(8000);
+    cy.wait(2000);
     cy.xpath('//a[normalize-space()="Dashboard"]')
     .should('be.visible')
     .click();
-    cy.wait(8000);
+    cy.wait(5000);
 
      // Search Client
      cy.xpath('//input[@id="txtSearch"]').type("J33");
@@ -33,7 +33,8 @@ describe('Dashboard Tests', () => {
 
     // View order details
      cy.xpath("(//a[@href='#SeeOrderModal'])[1]").click();
-     cy.wait(8000);
+     cy.xpath("//h5[@id='SeeOrderModal']",{ timeout: 10000 }).should('be.visible');
+     //cy.wait(8000);
 
      cy.xpath("//label[normalize-space()='Order Status']", { timeout: 10000 })
     .should('exist')
@@ -45,18 +46,18 @@ describe('Dashboard Tests', () => {
      cy.xpath('//a[normalize-space()="Dashboard"]')
     .should('be.visible')
     .click({force:true});
-     cy.wait(8000);
+     cy.wait(2000);
 
      // Invest more
      //cy.xpath("(//a[@title='Invest More'])[1]").click({force:true});
 
      //cy.xpath("(//a[@class='nav-link'])[10]").click();
 
-     cy.wait(8000);
+     cy.wait(10000);
      cy.xpath("(//a[@title='Invest More'])[2]").click();
-     cy.wait(8000);
+     cy.wait(10000);
      cy.xpath("//a[normalize-space()='Top Up']").click();
-     cy.wait(8000);
+     cy.wait(10000);
      /*cy.xpath("//a[normalize-space()='Proceed']").click();
      cy.wait(8000);
      cy.xpath("//a[normalize-space()='Confirm']").click();
@@ -97,7 +98,7 @@ describe('Dashboard Tests', () => {
      .should('be.visible')
      .click();
 */
-     cy.wait(5000);
+     cy.wait(2000);
      cy.xpath("//span[@class='k-icon k-i-x']").click();
 
      // Excel download

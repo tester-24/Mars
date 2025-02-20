@@ -36,7 +36,7 @@ describe('Marketplace Tests', () => {
      }
  });
  */
-     cy.wait(15000);
+     cy.wait(5000);
 
      //Charts
      cy.xpath("//span[contains(text(),'6m')]").click();
@@ -46,14 +46,14 @@ describe('Marketplace Tests', () => {
      cy.xpath("//span[contains(text(),'3y')]").click();
      cy.wait(1000);
      cy.xpath("//span[contains(text(),'11y')]").click();
-     cy.wait(1000);
+     cy.wait(2000);
  
      cy.window().then((win) => {
       cy.stub(win, 'open').callsFake((url) => {
         win.location.href = url;
       });
     });
-    cy.wait(1000)
+    cy.wait(2000)
 
     cy.xpath("//i[@class='fa fa-telegram']").click();
     cy.xpath("//i[@class='fa fa-instagram']").click();
@@ -63,9 +63,9 @@ describe('Marketplace Tests', () => {
     cy.xpath("//i[@class='fa fa-twitter']").click();
  
      cy.xpath("//img[@title='mars-jainam-piechart']").click({force:true});
-     cy.wait(8000);
+     cy.wait(2000);
      cy.xpath("//img[@title='mars-jainam-News']").click();
-     cy.wait(8000);
+     cy.wait(2000);
      cy.xpath("//img[@title='mars-jainam-Factsheet']").click();
    
   });

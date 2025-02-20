@@ -31,12 +31,13 @@ cy.xpath("(//kendo-dateinput//input[@class='k-input'])[2]")
 .type("31/01-2025", { force: true });
 
 cy.xpath("//button[@id='btnsearch']").click();
-cy.wait(10000);
+cy.wait(1000);
 
 cy.xpath("//button[normalize-space()='Export to Excel']").click();
-cy.wait(8000);
+cy.wait(7000);
 
 cy.xpath("(//button[@type='button'][normalize-space()='View'])[1]").click();
+cy.xpath("//h3[normalize-space()='Trade Reponse Report']",{timeout:5000}).should('be.visible');
 
   });
 });

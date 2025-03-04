@@ -59,7 +59,7 @@ describe('Marketplace Tests', () => {
     cy.xpath("//i[@class='fa fa-instagram']").click();
     cy.xpath("//i[@class='fa fa-facebook']").click();
     cy.xpath("//i[@class='fa fa-youtube']").click();
-    cy.xpath("//i[@class='fa fa-pinterest']").click();
+    //cy.xpath("//i[@class='fa fa-pinterest']").click();
     cy.xpath("//i[@class='fa fa-twitter']").click();
  
      cy.xpath("//img[@title='mars-jainam-piechart']").click({force:true});

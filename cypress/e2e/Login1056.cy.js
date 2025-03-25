@@ -3,8 +3,8 @@ import 'cypress-xpath';
 export const login = () => {
   cy.viewport(1280, 720);
   cy.visit('https://mars.jainam.in/home');
-  cy.wait(5000);
-  cy.xpath("//button[@aria-label='Close']").click();
+ // cy.wait(5000);
+ // cy.xpath("//button[@aria-label='Close']").click();
   cy.wait(5000);
   cy.xpath('/html/body/app-root/app-layout/div/app-maincontent/app-home/section/div/div[1]/div/div/div[2]/div[3]/a/span').click();
   cy.wait(5000);
@@ -20,6 +20,6 @@ export const login = () => {
   cy.xpath("//input[@id='pin3']").type("3");
   cy.xpath("//input[@id='pin4']").type("4");
   cy.wait(5000);
-  cy.xpath("//button[@aria-label='Close']").click();
-  cy.wait(5000);
+ // cy.xpath("//button[@aria-label='Close']").click();
+ // cy.wait(5000);
 };

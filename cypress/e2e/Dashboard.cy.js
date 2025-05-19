@@ -56,7 +56,7 @@ describe('Dashboard Tests', () => {
      cy.wait(10000);
      cy.xpath("(//a[@title='Invest More'])[2]").click();
      cy.wait(10000);
-     cy.xpath("//a[normalize-space()='Top Up']").click();
+     cy.xpath("//a[normalize-space()='Top Up']").click({force:true});
      cy.wait(10000);
      /*cy.xpath("//a[normalize-space()='Proceed']").click();
      cy.wait(8000);

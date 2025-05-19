@@ -83,7 +83,7 @@ describe('Dashboard Tests', () => {
 
      cy.xpath("/html/body/app-root/app-layout/div/app-maincontent/app-pmsperformance/main/section/div/div[2]/div/div[1]/div[3]/div[1]/div[2]/div/button[1]")
      .should('be.visible')
-     .click();
+     .click({force:true});
      //cy.xpath("//span[@class='k-icon k-i-x']").click();
 /*
      cy.xpath('//a[normalize-space()="Dashboard"]')

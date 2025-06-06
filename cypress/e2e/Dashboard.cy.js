@@ -113,7 +113,7 @@ describe('Dashboard Tests', () => {
       });
       cy.xpath("//a[@title='PDF']")
      .invoke('removeAttr', 'target') // Force link to open in the same tab
-     .click();
+     .click({force:true});
 
      cy.go('back');
 

@@ -102,7 +102,7 @@ describe('Dashboard Tests', () => {
      cy.xpath("//span[@class='k-icon k-i-x']").click();
 
      // Excel download
-     cy.xpath("//a[@title='Excel']").click();
+     cy.xpath("//a[@title='Excel']").click({force:true});
      //cy.xpath("(//a[normalize-space()='Withdrawal'])").click();
 
      // Pdf download

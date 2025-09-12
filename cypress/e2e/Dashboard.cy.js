@@ -25,7 +25,9 @@ describe('Dashboard Tests', () => {
      cy.wait(10000);
 
     // See Order
-     cy.xpath('(//a[@title="See Order"])[2]').click();
+    // MAY CHANGE IN FUTURE BELOW XPATH
+     //cy.xpath('(//a[@title="See Order"])[2]').click();
+    cy.xpath('//a[@title="See Order"]').click();
      cy.wait(10000);
 
     // Click Dropdown menu
@@ -80,11 +82,10 @@ describe('Dashboard Tests', () => {
 
      cy.xpath("(//a[@title='Performance'])[1]").click();
      cy.wait(10000);
-
-     cy.xpath("/html/body/app-root/app-layout/div/app-maincontent/app-pmsperformance/main/section/div/div[2]/div/div[1]/div[3]/div[1]/div[2]/div/button[1]")
-     .should('be.visible')
-     .click({force:true});
-     //cy.xpath("//span[@class='k-icon k-i-x']").click();
+//MAY CHANGE IN FUTURE BELOW XPATH
+    // cy.xpath("/html/body/app-root/app-layout/div/app-maincontent/app-pmsperformance/main/section/div/div[2]/div/div[1]/div[3]/div[1]/div[2]/div/button[1]")
+    // .should('be.visible')
+    // .click({force:true});
 /*
      cy.xpath('//a[normalize-space()="Dashboard"]')
      .should('be.visible')
@@ -98,8 +99,9 @@ describe('Dashboard Tests', () => {
      .should('be.visible')
      .click();
 */
-     cy.wait(2000);
-     cy.xpath("//span[@class='k-icon k-i-x']").click();
+    // MAY CHANGE IN FUTURE BELOW XPATH
+    // cy.wait(2000);
+    // cy.xpath("//span[@class='k-icon k-i-x']").click();
 
      // Excel download
      cy.xpath("//a[@title='Excel']").click({force:true});

@@ -26,8 +26,8 @@ describe('Dashboard Tests', () => {
 
     // See Order
     // MAY CHANGE IN FUTURE BELOW XPATH
-     //cy.xpath('(//a[@title="See Order"])[2]').click();
-    cy.xpath('//a[@title="See Order"]').click();
+     cy.xpath('(//a[@title="See Order"])[2]').click();
+    //cy.xpath('//a[@title="See Order"]').click();
      cy.wait(10000);
 
     // Click Dropdown menu
@@ -55,12 +55,16 @@ describe('Dashboard Tests', () => {
 
      //cy.xpath("(//a[@class='nav-link'])[10]").click();
 
-     cy.wait(10000);
+    // cy.wait(10000);
     // MAY CHANGE IN FUTURE BELOW XPATH
-     //cy.xpath("(//a[@title='Invest More'])[2]").click();
-     cy.xpath("//a[@title='Invest More']").click();
+     cy.xpath("(//a[@title='Invest More'])[1]").click();
+     //cy.xpath("//a[@title='Invest More']").click();
      cy.wait(10000);
      cy.xpath("//a[normalize-space()='Top Up']").click({force:true});
+     cy.wait(10000);
+
+    
+     cy.xpath("//a[normalize-space()='Skip for Now']").click();
      cy.wait(10000);
      /*cy.xpath("//a[normalize-space()='Proceed']").click();
      cy.wait(8000);
